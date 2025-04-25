@@ -3,6 +3,7 @@
     margin-top: 80px; /* To account for fixed navbar */
     padding: 2rem 0;
     background-color: #f9fafb;
+    margin-bottom: 10px;
   }
   
   .hero-container {

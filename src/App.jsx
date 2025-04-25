@@ -5,6 +5,8 @@ import Product from "./components/Product";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NotFound from "./components/NotFound";
+import AllProducts from "./components/AllProduct";
+import Deals from "./components/Deals";
 
 const App = () => {
   return (
@@ -17,13 +19,13 @@ const App = () => {
             element={
               <>
                 <Hero />
-                <Product />
+                <Product text={"Featured Products"} tag={"beverages"} number={4}/>
               </>
             }
           />
-          {/* <Route path='/about'element={<h1>This is about page</h1>}/>
-          <Route path='/cart'element={<h1>This is cart page</h1>}/>
-          <Route path='/product'element={<h1>This is product page</h1>}/> */}
+          <Route path='/deals'element={<Deals/>}/>
+          {/* <Route path='/cart'element={<h1>This is cart page</h1>}/>*/} 
+          <Route path='/products'element={<AllProducts/>}/> 
           <Route path='*'element={<NotFound/>}/>
           
         </Routes>
