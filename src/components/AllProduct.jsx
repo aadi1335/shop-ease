@@ -87,7 +87,7 @@ const AllProducts = () => {
             </div>
           </div>
 
-          <Product text={"Here is you list of items..."} tag={searchTerm} number={4}/>
+          <Product text={"We found some items of yur interest😍"} tag={searchTerm} number={4}/>
         </div>
       </section>
     </>

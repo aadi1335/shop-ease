@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { FaStar, FaRegStar, FaShoppingCart, FaHeart, FaRegHeart, FaArrowRight } from 'react-icons/fa';
 import './stylesheet/Deals.css';
 import Loader from './Loader';
+import { Link } from 'react-router-dom';
 
 const Deals = () => {
   const [products, setProducts] = useState([]);
@@ -153,11 +154,13 @@ const Deals = () => {
                     -{Math.round(product.discountPercentage)}%
                   </div>
                   <div className="deal-image-container">
+                    <Link to={`/products/${product.id}`}>
                     <img 
                       src={product.thumbnail} 
                       alt={product.title} 
                       className="deal-image"
                     />
+                    </Link>
                     <button 
                       className="wishlist-button"
                       onClick={() => toggleWishlist(product.id)}

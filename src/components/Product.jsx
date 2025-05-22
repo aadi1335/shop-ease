@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './stylesheet/ProductSection.css';
 import { FaStar, FaRegStar, FaShoppingCart, FaHeart, FaRegHeart } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import Loader from './Loader';
 
 const Product = (props) => {
@@ -95,11 +96,13 @@ const Product = (props) => {
               {filteredProducts.map(product => (
                 <div key={product.id} className="product-card">
                   <div className="product-image-container">
+                    <Link to={`/products/${product.id}`}>
                     <img 
                       src={product.thumbnail} 
                       alt={product.title} 
                       className="product-image"
                     />
+                    </Link>
                     <div className="product-badge">
                       {product.discountPercentage > 10 && (
                         <span className="discount-badge">
